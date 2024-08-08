@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center horizontally */
+    height: 100vh;
+    background-color: #1e1e1e; /* Dark background color */
+    color: black; /* Light text color for contrast */
+    font-family: Arial, sans-serif; /* Example font */
+  }
+  
+  .gantt-chart {
+    width: 90%;
+    max-width: 1200px; /* Optional max-width for the chart */
+    margin: 20px auto;
+    background-color: white; /* Darker background for the chart */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+  }
+  
+  /* Customize the Gantt chart's elements */
+  .gantt-chart .bar {
+    background-color: #4caf50; /* Example bar color */
+  }
+  
+  .gantt-chart .bar.progress {
+    background-color: #ffbb54; /* Example progress color */
+  }
+  
+  .gantt-chart .bar:hover {
+    background-color: #66bb6a; /* Lighter color on hover */
+  }
+  
+  .gantt-chart .task-label {
+    color: #ffffff; /* Light text color */
+  }
+  
+  /* Customize other Gantt chart elements as needed */
+  .gantt-chart .grid-line {
+    stroke: #444444; /* Grid line color */
+  }
+  
+  .gantt-chart .task-dependency {
+    stroke: #ffbb54; /* Dependency line color */
+  }
+  .controls{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:100%;
+    margin-bottom:5px;
+  }
+  .control-button {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 0.5rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .control-button.inactive {
+    background-color: #ccc; /* Inactive state color */
+    color: #333;
+  }
+  
+  .control-button.active {
+    background-color: red; /* Active state color */
+    color: #fff;
+  }
+  .menu{
+    transition: transform 0.1s ease-in-out;
+    transform: translateY(0);
+  }
+  .menu-icon{
+    position:absolute;
+    top:10px;
+    cursor: pointer;
+    border-radius: 15px;
+  }
+  .menu-icon:hover{
+    color:red;
+    background-color: red;
+    transform:translateY(25%);
+    transition: transform 0.1s ease-in-out;
+  }
+  /* Additional styles for responsive behavior */
+  @media (max-width: 768px) {
+    .control-button {
+      padding: 0.4rem;
+    }
+  }
